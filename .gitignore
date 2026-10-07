@@ -1,0 +1,39 @@
+# Operating systems and local editor settings
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Node and browser test outputs
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+
+# .NET
+**/bin/
+**/obj/
+*.user
+*.suo
+TestResults/
+
+# Local configuration and private data
+.env
+.env.*
+!.env.example
+**/appsettings.Local.json
+private/
+local-data/
+*.db
+*.db-shm
+*.db-wal
+*.log
+
+# Future Unity generated output; preserve assets and .meta files
+**/Library/
+**/Temp/
+**/Logs/
+**/UserSettings/
+**/Builds/
