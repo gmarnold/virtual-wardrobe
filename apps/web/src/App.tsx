@@ -38,7 +38,7 @@ export default function App() {
         </div>
         <div className="collection-bar">
           <h2>The collection</h2>
-          <span>{state.kind === 'ready' ? `${state.garments.length} pieces` : 'Wardrobe'}</span>
+          <span>{state.kind === 'ready' ? `${state.garments.length} ${state.garments.length === 1 ? 'piece' : 'pieces'}` : 'Wardrobe'}</span>
         </div>
         {state.kind === 'loading' && <div className="state-panel" role="status">Opening your closet…</div>}
         {state.kind === 'error' && (
