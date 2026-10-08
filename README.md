@@ -98,6 +98,7 @@ set -a
 source .env
 set +a
 export ConnectionStrings__Wardrobe="Host=localhost;Port=$POSTGRES_PORT;Database=$POSTGRES_DB;Username=$POSTGRES_USER;Password=$POSTGRES_PASSWORD"
+dotnet restore apps/api
 dotnet tool restore
 dotnet ef migrations add DescribeTheChange --project apps/api
 bash scripts/wardrobe.sh migrate

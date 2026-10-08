@@ -14,9 +14,10 @@ Public repository: [gmarnold/virtual-wardrobe](https://github.com/gmarnold/virtu
 | `2d8c6b9` | Configurable API-backed React cards and UI states |
 | `925a7a0` | API, serialization, UI, and browser tests; local command helper |
 | `b01d5bb` | CI with PostgreSQL services and frontend/backend checks |
-| `docs: document architecture and local setup` | README, architecture notes, decisions, this report |
+| `ed37db3` | README, architecture notes, decisions, this report |
+| `fix: restore API packages before running migrations` | Make the migration helper work on a fresh checkout |
 
-All commits use my existing Git identity. The documentation commit can be found by its message in `git log --oneline`.
+All commits use my existing Git identity. The migration fix can be found by its message in `git log --oneline`.
 
 ## Stack and structure
 

@@ -16,7 +16,7 @@ if ! command -v "$DOTNET_BIN" >/dev/null && [[ -x /usr/local/share/dotnet/dotnet
 fi
 case "${1:-help}" in
   db) docker compose up -d --wait ;;
-  migrate) "$DOTNET_BIN" tool restore; "$DOTNET_BIN" ef database update --project apps/api ;;
+  migrate) "$DOTNET_BIN" restore apps/api; "$DOTNET_BIN" tool restore; "$DOTNET_BIN" ef database update --project apps/api ;;
   api) exec "$DOTNET_BIN" run --project apps/api --launch-profile http ;;
   test-api)
     if ! docker compose exec -T postgres sh -c 'psql -U "$POSTGRES_USER" -d postgres -Atc "SELECT datname FROM pg_database"' | grep -qx virtual_wardrobe_test; then
